@@ -1,6 +1,8 @@
 # Credimax — no versionar secretos locales
 config/config.php
 storage/logs/*.log
+storage/sessions/**
+!storage/sessions/.gitkeep
 storage/mp_mcp_apply.php
 storage/uploads/kyc/**
 !storage/uploads/kyc/.gitkeep
