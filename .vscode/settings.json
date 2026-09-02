@@ -1,0 +1,10 @@
+{
+  "files.encoding": "utf8",
+  "files.autoGuessEncoding": false,
+  "[php]": {
+    "files.encoding": "utf8"
+  },
+  "intelephense.environment.phpVersion": "8.2.0",
+  "intelephense.files.maxSize": 5000000,
+  "intelephense.diagnostics.undefinedVariables": false
+}

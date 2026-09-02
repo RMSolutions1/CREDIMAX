@@ -1,0 +1,26 @@
+RewriteEngine On
+
+# Bloquear acceso directo a carpetas sensibles y archivos operativos.
+# Las migraciones, seeds, diagnósticos y cron solo se ejecutan por CLI.
+RewriteRule ^(app|config|database|storage)(/|$) - [F,L,NC]
+# El instalador solo se bloquea cuando ya existe config o el lock de producción.
+RewriteCond config/config.php -f [OR]
+RewriteCond storage/INSTALL_LOCKED -f
+RewriteRule ^install(/|$) - [F,L,NC]
+RewriteRule ^(cron|diagnostico|migrate_production|migrate_mercadopago|migrate_banking|mp_smoketest|seed_usuarios)\.php$ - [F,L,NC]
+
+# No reescribir archivos/directorios reales
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Front controller
+RewriteRule ^ index.php [L,QSA]
+
+# Seguridad adicional
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Denegar listado de directorios
+Options -Indexes

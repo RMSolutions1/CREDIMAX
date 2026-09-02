@@ -1,0 +1,14 @@
+# Credimax — no versionar secretos locales
+config/config.php
+storage/logs/*.log
+storage/mp_mcp_apply.php
+storage/uploads/kyc/**
+!storage/uploads/kyc/.gitkeep
+!storage/logs/.gitkeep
+
+# Scripts temporales de recuperación local
+recover-from-cursor-history.ps1
+scan-backups.ps1
+backup-scan.txt
+recovery-log.txt
+recovery-errors.txt

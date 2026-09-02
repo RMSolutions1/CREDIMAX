@@ -1,0 +1,3 @@
+-- Archivo de referencia. Preferí schema.sql (instalación nueva)
+-- o migrate_banking.php (instalación existente).
+-- Credimax Bank privado — entity 900 — sin dependencias externas.
