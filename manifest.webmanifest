@@ -1,0 +1,25 @@
+{
+  "name": "Credimax",
+  "short_name": "Credimax",
+  "description": "Créditos e inversiones entre personas en Argentina. En pesos, con CFT transparente.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0A2340",
+  "theme_color": "#0A2340",
+  "lang": "es-AR",
+  "icons": [
+    {
+      "src": "./assets/img/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

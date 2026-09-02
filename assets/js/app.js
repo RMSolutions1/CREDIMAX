@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (_) {}
   });
 
-  // Reveal on scroll
+  // Reveal on scroll (lo que ya está en pantalla se muestra al toque)
   const reveals = document.querySelectorAll('[data-reveal]');
   if (reveals.length && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
@@ -73,8 +73,15 @@ document.addEventListener('DOMContentLoaded', () => {
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
-    reveals.forEach((el) => io.observe(el));
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach((el) => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight * 0.92) {
+        el.classList.add('is-visible');
+      } else {
+        io.observe(el);
+      }
+    });
   } else {
     reveals.forEach((el) => el.classList.add('is-visible'));
   }

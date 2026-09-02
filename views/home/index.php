@@ -16,7 +16,7 @@ $splitBorrow  = 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=
 $splitInvest  = 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1400&h=1050&q=85';
 $nonce = csp_nonce();
 ?>
-<section class="hero hero-compete hero-leader" data-reveal>
+<section class="hero hero-compete hero-leader">
   <div class="hero-slider" aria-hidden="true">
     <?php foreach ($heroSlides as $i => $src): ?>
       <div class="hero-slide <?= $i === 0 ? 'is-active' : '' ?>" style="background-image:url('<?= e($src) ?>')"></div>
@@ -33,7 +33,7 @@ $nonce = csp_nonce();
     </p>
     <div class="hero-cta">
       <a class="btn btn-accent btn-lg" href="<?= e(url('/simulador')) ?>">
-        <i class="fa-solid fa-calculator-simple"></i> Simular mi préstamo
+        <i class="fa-solid fa-calculator"></i> Simular mi préstamo
       </a>
       <a class="btn btn-ghost btn-lg" href="<?= e(url('/register')) ?>">
         <i class="fa-solid fa-user-plus"></i> Abrir mi cuenta gratis
@@ -44,7 +44,7 @@ $nonce = csp_nonce();
       <li><i class="fa-solid fa-chart-pie"></i> CFT a la vista</li>
       <li><i class="fa-solid fa-wallet"></i> Billetera + Mercado Pago</li>
       <li><i class="fa-solid fa-credit-card"></i> Hasta $5.000.000</li>
-      <li><i class="fa-solid fa-id-card-clip-check"></i> Identidad verificada</li>
+      <li><i class="fa-solid fa-id-card"></i> Identidad verificada</li>
     </ul>
     <div class="trust-logos">
       <span><i class="fa-solid fa-peso-sign"></i> Operatoria en pesos</span>
@@ -71,7 +71,7 @@ $nonce = csp_nonce();
         </div>
       </div>
       <div class="hero-float-card pos-br fc-shield">
-        <span class="fa-stack"><i class="fa-solid fa-circle fa-stack-2x"></i><i class="fa-solid fa-lock-hashtag fa-stack-1x"></i></span>
+        <span class="fa-stack"><i class="fa-solid fa-circle fa-stack-2x"></i><i class="fa-solid fa-lock fa-stack-1x"></i></span>
         <div>
           <strong>Datos protegidos</strong>
           <span>AES-256 + KYC cifrado</span>
@@ -88,7 +88,7 @@ $nonce = csp_nonce();
 
 <section class="trust-bar" data-reveal>
   <div class="trust-bar-inner">
-    <p><i class="fa-solid fa-flag-argentina" style="color:var(--brand-2);margin-right:.45rem"></i><strong>Hecho en Argentina, para Argentina.</strong> Residentes. Pesos. Costos claros. Sin letra chica de prestamista informal.</p>
+    <p><i class="fa-solid fa-flag" style="color:var(--brand-2);margin-right:.45rem"></i><strong>Hecho en Argentina, para Argentina.</strong> Residentes. Pesos. Costos claros. Sin letra chica de prestamista informal.</p>
     <div class="trust-bar-links">
       <a href="<?= e(url('/legales/cumplimiento')) ?>"><i class="fa-solid fa-gavel"></i> Marco regulatorio</a>
       <a href="<?= e(url('/seguridad')) ?>"><i class="fa-solid fa-shield-halved"></i> Seguridad</a>
@@ -102,8 +102,8 @@ $nonce = csp_nonce();
   <div class="logo-strip-grid" aria-label="Certificaciones">
     <span><i class="fa-solid fa-building-columns"></i> BCRA Transparencia</span>
     <span><i class="fa-solid fa-user-shield"></i> UIF / PEPs</span>
-    <span><i class="fa-solid fa-lock-keyhole"></i> AES-256 en reposo</span>
-    <span><i class="fa-solid fa-cloud-check"></i> Datos alojados en AR</span>
+    <span><i class="fa-solid fa-lock"></i> AES-256 en reposo</span>
+    <span><i class="fa-solid fa-cloud"></i> Datos alojados en AR</span>
     <span><i class="fa-solid fa-file-contract"></i> Ley 25.506 firma electrónica</span>
   </div>
 </div>

@@ -4,6 +4,25 @@ Plataforma web de **créditos P2P** con **billetera**, **QR**, **tesorería** e 
 
 Stack: **PHP 8+ + MySQL** (sin Composer). Compatible con hosting compartido / XAMPP.
 
+**Repositorio:** [github.com/RMSolutions1/CREDIMAX](https://github.com/RMSolutions1/CREDIMAX)
+
+## Clonar e instalar
+
+```bash
+git clone https://github.com/RMSolutions1/CREDIMAX.git
+cd CREDIMAX
+copy config\config.sample.php config\config.php   # Windows
+# cp config/config.sample.php config/config.php   # Linux/macOS
+```
+
+1. Crear base MySQL e importar `database/schema.sql` (o usar `/install/` en local).
+2. Completar `config/config.php` (secretos, DB, `app_url`).
+3. `php migrate_production.php` y `php migrate_mercadopago.php` si aplica.
+4. `php diagnostico.php` → debe terminar **sin fallas**.
+5. Usuarios demo (solo local): `php seed_usuarios.php`
+
+> `config/config.php` **no se versiona** (está en `.gitignore`). Cada entorno tiene el suyo.
+
 ## Documentación operativa
 
 - Checklist de producción: [`PRODUCTION.md`](PRODUCTION.md)
@@ -105,4 +124,15 @@ Contraseña de todas: `Demo1234!`
 
 ## Seguridad incluida
 
-CSRF, password hash, login lock, reset password, JWT secret, OTP hasheado, CSP/HSTS, audit logs, install lock.
+CSRF, password hash, login lock, reset password, JWT secret, OTP hasheado, TOTP opcional, CSP/HSTS, audit logs, install lock.
+
+## Mantener el repo actualizado
+
+```bash
+git pull origin main
+php migrate_production.php
+php migrate_mercadopago.php
+php diagnostico.php
+```
+
+No commitear `config/config.php`, logs ni uploads KYC.

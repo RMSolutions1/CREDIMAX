@@ -58,6 +58,7 @@ $router->get('/legales/privacidad', [SiteController::class, 'privacy']);
 $router->get('/legales/cookies', [SiteController::class, 'cookies']);
 $router->get('/legales/contrato-credito', [SiteController::class, 'loanContract']);
 $router->get('/legales/manual-operativo', [SiteController::class, 'operatingManual']);
+$router->get('/legales/manual', [SiteController::class, 'operatingManual']);
 $router->get('/legales/pep', [SiteController::class, 'pep']);
 $router->get('/legales/defensa-consumidor', [SiteController::class, 'consumer']);
 $router->get('/legales/cumplimiento', [SiteController::class, 'compliance']);

@@ -33,7 +33,7 @@ $icon = static function (string $path): string {
   <div class="nav-group">
     <button class="nav-group-btn" type="button">Más</button>
     <div class="nav-group-panel">
-      <a href="<?= e(url('/simulador')) ?>"><i class="fa-solid fa-calculator-simple"></i> Simulador</a>
+      <a href="<?= e(url('/simulador')) ?>"><i class="fa-solid fa-calculator"></i> Simulador</a>
       <a href="<?= e(url('/tasas')) ?>"><i class="fa-solid fa-percent"></i> Tasas y CFT</a>
       <a href="<?= e(url('/ayuda')) ?>"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
       <a href="<?= e(url('/onboarding')) ?>"><i class="fa-solid fa-person-walking-arrow-right"></i> Onboarding</a>

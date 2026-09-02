@@ -31,7 +31,7 @@
   </div>
   <label><i class="fa-solid fa-lock"></i> Contraseña (mín. 8, mayúscula, minúscula y número)</label>
   <input type="password" name="password" required minlength="8" autocomplete="new-password">
-  <label class="check"><input type="checkbox" name="resident_ar" value="1" required> <i class="fa-solid fa-flag-argentina gold"></i> Declaro residencia en Argentina y operatoria en pesos (ARS)</label>
+  <label class="check"><input type="checkbox" name="resident_ar" value="1" required> <i class="fa-solid fa-flag gold"></i> Declaro residencia en Argentina y operatoria en pesos (ARS)</label>
   <label class="check"><input type="checkbox" name="accept_terms" value="1" required> Acepto <a href="<?= e(url('/legales/terminos')) ?>" target="_blank"><i class="fa-solid fa-file-contract"></i> Términos</a></label>
   <label class="check"><input type="checkbox" name="accept_privacy" value="1" required> Acepto <a href="<?= e(url('/legales/privacidad')) ?>" target="_blank"><i class="fa-solid fa-user-shield"></i> Privacidad</a></label>
   <label class="check"><input type="checkbox" name="accept_adhesion" value="1" required> Acepto el <a href="<?= e(url('/legales/adhesion')) ?>" target="_blank"><i class="fa-solid fa-handshake"></i> Contrato de adhesión</a> y el esquema de <a href="<?= e(url('/legales/fideicomiso')) ?>" target="_blank"><i class="fa-solid fa-scale-unbalanced-flip"></i> fideicomiso / segregación</a></label>

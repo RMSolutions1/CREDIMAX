@@ -494,6 +494,9 @@ code, .payload, .code-block { font-family: var(--mono); font-size: .84em; word-b
   transition: opacity .6s var(--ease), transform .6s var(--ease);
 }
 [data-reveal].is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+}
 .sticky-cta {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 80;
   background: rgba(7,21,37,.94);
@@ -643,6 +646,25 @@ code, .payload, .code-block { font-family: var(--mono); font-size: .84em; word-b
   box-shadow: var(--shadow-lg);
 }
 .auth-switch { margin-top: 1rem; color: var(--muted); }
+.demo-hint {
+  margin: 0 0 1.15rem;
+  padding: .85rem 1rem;
+  border-radius: 12px;
+  background: #F4F8F4;
+  border: 1px solid #C9E0D0;
+  color: #1F4D38;
+  font-size: .88rem;
+}
+.demo-hint strong { display: block; margin-bottom: .4rem; }
+.demo-hint ul { margin: .2rem 0 .45rem 1.1rem; padding: 0; }
+.demo-hint code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: .82em;
+  background: rgba(10,35,64,.06);
+  padding: .08rem .35rem;
+  border-radius: 5px;
+}
+.demo-hint p { margin: 0; }
 
 /* App shell */
 .app-body { background: var(--bg); }

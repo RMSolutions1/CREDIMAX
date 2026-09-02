@@ -80,7 +80,7 @@ $nonce = csp_nonce();
           <span class="brand-text"><?= e($brand) ?></span>
         </a>
         <p class="muted">
-          <i class="fa-solid fa-flag-argentina" style="color:var(--gold-2)"></i>&nbsp; Plataforma argentina de créditos e inversiones P2P. En pesos. Con CFT transparente a la vista.
+          <i class="fa-solid fa-flag" style="color:var(--gold-2)"></i>&nbsp; Plataforma argentina de créditos e inversiones P2P. En pesos. Con CFT transparente a la vista.
         </p>
         <p style="margin:.6rem 0 0;line-height:1.9">
           <a href="<?= e(url('/contacto')) ?>"><i class="fa-solid fa-envelope"></i> soporte@credimax.com.ar</a><br>
@@ -125,7 +125,7 @@ $nonce = csp_nonce();
         <a href="<?= e(url('/legales/cookies')) ?>"><i class="fa-solid fa-cookie-bite"></i> Política de cookies</a>
         <a href="<?= e(url('/legales/defensa-consumidor')) ?>"><i class="fa-solid fa-hand-holding-hand"></i> Defensa del Consumidor</a>
         <a href="<?= e(url('/legales/pep')) ?>"><i class="fa-solid fa-id-card"></i> Política PEPs / UIF</a>
-        <a href="<?= e(url('/legales/manual')) ?>"><i class="fa-solid fa-book"></i> Manual de usuario</a>
+        <a href="<?= e(url('/legales/manual-operativo')) ?>"><i class="fa-solid fa-book"></i> Manual de usuario</a>
       </div>
     </div>
     <p class="foot-note muted">
@@ -146,7 +146,7 @@ $nonce = csp_nonce();
 
   <div class="sticky-cta" data-sticky-cta hidden>
     <div class="sticky-cta-inner">
-      <span><i class="fa-solid fa-calculator-simple" style="color:var(--gold-2);margin-right:.4rem"></i>Simulá gratis · Desembolso 100% · CFT transparente</span>
+      <span><i class="fa-solid fa-calculator" style="color:var(--gold-2);margin-right:.4rem"></i>Simulá gratis · Desembolso 100% · CFT transparente</span>
       <div class="sticky-cta-actions">
         <a class="btn btn-accent" href="<?= e(url('/simulador')) ?>"><i class="fa-solid fa-sliders"></i> Simular</a>
         <a class="btn" href="<?= e(url('/register')) ?>"><i class="fa-solid fa-user-plus"></i> Abrir cuenta</a>
