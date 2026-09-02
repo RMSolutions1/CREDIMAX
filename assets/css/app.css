@@ -514,6 +514,10 @@ code, .payload, .code-block { font-family: var(--mono); font-size: .84em; word-b
 .sticky-cta-actions { display: flex; gap: .5rem; }
 .sticky-cta .btn { border-color: rgba(255,255,255,.2); }
 .sticky-cta .btn:not(.btn-accent) { background: transparent; color: #fff; }
+body.has-sticky-cta { padding-bottom: 5.5rem; }
+@media (max-width: 860px) {
+  body.has-sticky-cta { padding-bottom: 8.5rem; }
+}
 @media (max-width: 860px) {
   .mini-sim { grid-template-columns: 1fr; }
   .sticky-cta-inner { flex-direction: column; align-items: stretch; text-align: center; }

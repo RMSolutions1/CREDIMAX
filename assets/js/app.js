@@ -86,13 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach((el) => el.classList.add('is-visible'));
   }
 
-  // Sticky CTA after hero
+  // Sticky CTA after hero (reserva espacio para no tapar botones)
   const sticky = document.querySelector('[data-sticky-cta]');
   const hero = document.querySelector('.hero');
   if (sticky && hero) {
     const toggleSticky = () => {
       const passed = window.scrollY > hero.offsetHeight * 0.65;
       sticky.hidden = !passed;
+      document.body.classList.toggle('has-sticky-cta', passed);
     };
     toggleSticky();
     window.addEventListener('scroll', toggleSticky, { passive: true });
